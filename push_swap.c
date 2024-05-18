@@ -6,7 +6,7 @@
 /*   By: almohame <almohame@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 08:11:43 by almohame          #+#    #+#             */
-/*   Updated: 2024/05/18 14:20:59 by almohame         ###   ########.fr       */
+/*   Updated: 2024/05/18 16:00:47 by almohame         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_free(t_stack **stack_a, t_stack **stack_b)
 {
-	t_stack		*p;
-	t_stack		*tmp;
+	t_stack	*p;
+	t_stack	*tmp;
 
 	if (stack_a && *stack_a)
 	{
@@ -23,7 +23,7 @@ void	ft_free(t_stack **stack_a, t_stack **stack_b)
 		while (p)
 		{
 			tmp = p->next;
-			free (p);
+			free(p);
 			p = tmp;
 		}
 		*stack_a = NULL;
@@ -34,7 +34,7 @@ void	ft_free(t_stack **stack_a, t_stack **stack_b)
 		while (p)
 		{
 			tmp = p->next;
-			free (p);
+			free(p);
 			p = tmp;
 		}
 		*stack_b = NULL;
@@ -72,7 +72,7 @@ int	main(int ac, char **av)
 	{
 		if (!av[1][0])
 			exit(write(2, "Error\n", 6));
-		handle_errors(&stack_a ,  av);
+		handle_errors(&stack_a, av);
 		ft_sort_stack(&stack_a, &stack_b);
 	}
 	return (ft_free(&stack_a, &stack_b), 0);

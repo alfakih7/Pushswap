@@ -6,7 +6,7 @@
 /*   By: almohame <almohame@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 08:10:36 by almohame          #+#    #+#             */
-/*   Updated: 2024/05/10 08:10:38 by almohame         ###   ########.fr       */
+/*   Updated: 2024/05/18 18:50:53 by almohame         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ static size_t	ft_wordcount(char const *s, char c)
 	while (s[i] != '\0')
 	{
 		if ((i == 0 && s[i] != c) || (s[i] == c && s[i + 1] != '\0' && s[i
-				+ 1] != c))
+					+ 1] != c))
 			listsize++;
 		i++;
 	}

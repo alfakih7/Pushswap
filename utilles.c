@@ -6,7 +6,7 @@
 /*   By: almohame <almohame@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 08:12:32 by almohame          #+#    #+#             */
-/*   Updated: 2024/05/12 13:56:19 by almohame         ###   ########.fr       */
+/*   Updated: 2024/05/18 18:51:29 by almohame         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,21 +58,4 @@ t_stack	*ft_new_node(int data)
 	node->data = data;
 	node->next = NULL;
 	return (node);
-}
-int	ft_print_str(int fd, char *s)
-{
-	unsigned int	i;
-
-	i = 0;
-	if (!s)
-	{
-		write(fd, "(null)", 6);
-		return (6);
-	}
-	while (s != 0 && s[i] != 0)
-	{
-		write(fd, &s[i], 1);
-		i++;
-	}
-	return (i);
 }

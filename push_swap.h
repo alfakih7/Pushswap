@@ -6,7 +6,7 @@
 /*   By: almohame <almohame@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 08:11:54 by almohame          #+#    #+#             */
-/*   Updated: 2024/05/18 14:20:42 by almohame         ###   ########.fr       */
+/*   Updated: 2024/05/18 15:58:15 by almohame         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ typedef struct stack
 t_stack				*ft_stack_last(t_stack *stack_a);
 t_stack				*ft_new_node(int data);
 long long			ft_atoi_p(const char *str);
-void    			handle_errors(t_stack **stack_a , char **av);
+void				give_indexes(t_stack **stack_a);
+void				handle_errors(t_stack **stack_a, char **av);
 int					ft_print_str(int fd, char *s);
 int					ft_check(t_stack **stack_a);
 int					ascending(t_stack *stack, int target1, int target2);
@@ -53,5 +54,4 @@ void				ft_sort_four(t_stack **stack_a, t_stack **stack_b);
 void				ft_sort_five(t_stack **stack_a, t_stack **stack_b);
 void				ft_sort_stack(t_stack **stack_a, t_stack **stack_b);
 void				ft_radix(t_stack **stack_a, t_stack **stack_b);
-
 #endif

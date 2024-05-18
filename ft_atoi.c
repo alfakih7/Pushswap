@@ -6,7 +6,7 @@
 /*   By: almohame <almohame@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 08:10:23 by almohame          #+#    #+#             */
-/*   Updated: 2024/05/18 13:01:09 by almohame         ###   ########.fr       */
+/*   Updated: 2024/05/18 16:19:21 by almohame         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ long long	ft_atoi_p(const char *str)
 
 	result = 0;
 	sign = 1;
-	while (*str != '\0' && ((*str >= 9 && *str <= 13) || *str == 32))
+	while (*str != '\0' && *str == 32)
 		str++;
 	if (*str == '-' || *str == '+')
 		if (*(str++) == '-')
